@@ -51,7 +51,7 @@ body{
 
 .main-nav a{color:var(--text);text-decoration:none;font-weight:500;transition:color 0.3s;font-size:0.95rem}
 
-.main-nav a:hover{color:var(--primary;background:#DCDCDC;padding:8px 15px;border-radius:5px)}
+.main-nav a:hover{color:var(--primary)}
 
 .main-nav .cta{background:var(--accent);color:#fff;padding:0.65rem 1.5rem;border-radius:8px;font-weight:600;transition:all 0.3s}
 
