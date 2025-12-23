@@ -673,3 +673,64 @@ h3{font-size:1.5rem;font-weight:600;color:var(--text)}
 .social-icon svg {
   display: block;
 }
+
+/* ===========================
+   HAMBURGER MENU STYLES
+   =========================== */
+
+/* Hide hamburger by default (desktop) */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 1000;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.menu-toggle .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: var(--primary);
+  transition: 0.3s;
+  border-radius: 2px;
+}
+
+/* Show hamburger and modify nav for mobile/tablet */
+@media (max-width: 1023px) {
+  .menu-toggle {
+    display: flex;
+  }
+  
+  .main-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    padding: 1rem;
+    flex-direction: column;
+    gap: 0.5rem;
+    z-index: 999;
+  }
+  
+  .main-nav.active {
+    display: flex;
+  }
+  
+  .main-nav a {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  .main-nav a:hover {
+    background: var(--bg);
+  }
+}
