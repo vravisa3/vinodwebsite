@@ -864,3 +864,14 @@ a.prof-link {
 a.prof-link:hover {
   text-decoration: underline; /* or none if you want zero effect on hover */
 }
+
+/* Global link reset */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Optional: subtle hover for desktop */
+a:hover {
+  text-decoration: underline;
+}
