@@ -51,7 +51,7 @@ body{
 
 .main-nav a{color:var(--text);text-decoration:none;font-weight:500;transition:color 0.3s;font-size:0.95rem}
 
-.main-nav a:hover{color:var(--primary)}
+.main-nav a:hover{color:var(--primary;background:#DCDCDC;padding:8px 15px;border-radius:5px)}
 
 .main-nav .cta{background:var(--accent);color:#fff;padding:0.65rem 1.5rem;border-radius:8px;font-weight:600;transition:all 0.3s}
 
@@ -733,4 +733,134 @@ h3{font-size:1.5rem;font-weight:600;color:var(--text)}
   .main-nav a:hover {
     background: var(--bg);
   }
+}
+
+/* Contact Buttons */
+.contact-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.contact-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.email-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.email-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+}
+
+.linkedin-btn {
+  background: linear-gradient(135deg, #0077b5 0%, #00a0dc 100%);
+  color: white;
+}
+
+.linkedin-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 119, 181, 0.4);
+}
+
+.contact-btn .emoji {
+  font-size: 1.25rem;
+}
+
+.contact-btn svg {
+  flex-shrink: 0;
+}
+
+/* Footer content centering */
+.site-footer {
+  text-align: center;
+    padding: 3rem 2rem;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-email {
+  margin: 1rem 0;
+  font-size: 1.1rem;
+  color: white;
+}
+
+.footer-linkedin {
+  display: inline-flex;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: opacity 0.3s;
+}
+
+.footer-linkedin:hover {
+  opacity: 0.8;
+}
+
+.site-footer h3 {
+  color: white;
+}
+
+/* Override content-grid to make cards full width and stack vertically */
+.content-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.content-card {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Blog page: 4 cards per row */
+.blog-page .content-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+/* Responsive tweaks */
+@media (max-width: 1024px) {
+  .blog-page .content-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .blog-page .content-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* Invisible text-style links for organizations and professors */
+a.prof-link {
+  color: inherit;
+  text-decoration: none;
+  font-weight: inherit;
+}
+
+a.prof-link:hover {
+  text-decoration: underline; /* or none if you want zero effect on hover */
 }
