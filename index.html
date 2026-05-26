@@ -1,3 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Vinod Krishnaa | Construction Technology</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
 <style>
 
 *{
@@ -19,16 +32,15 @@ overflow-x:hidden;
 
 :root{
 --orange:#f97316;
---light-orange:#fff7ed;
---text:#111111;
+--black:#111111;
 --muted:#666666;
 --border:#e5e7eb;
---card:#ffffff;
+--light:#f8fafc;
 }
 
 .container{
 width:90%;
-max-width:1250px;
+max-width:1280px;
 margin:auto;
 }
 
@@ -36,30 +48,31 @@ margin:auto;
 
 header{
 position:fixed;
-width:100%;
 top:0;
-z-index:1000;
+width:100%;
 background:rgba(255,255,255,0.95);
 backdrop-filter:blur(10px);
-border-bottom:1px solid var(--border);
+border-bottom:1px solid #f1f1f1;
+z-index:1000;
 }
 
 nav{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:22px 0;
+padding:24px 0;
 }
 
 .logo{
-font-size:1.5rem;
+font-size:1.6rem;
 font-weight:800;
 color:var(--orange);
+letter-spacing:1px;
 }
 
 nav ul{
 display:flex;
-gap:34px;
+gap:36px;
 list-style:none;
 }
 
@@ -75,7 +88,7 @@ nav ul li a:hover{
 color:var(--orange);
 }
 
-.nav-btn{
+.contact-btn{
 background:var(--orange);
 color:white;
 padding:14px 24px;
@@ -87,35 +100,33 @@ font-weight:600;
 /* HERO */
 
 .hero{
-min-height:100vh;
-display:flex;
-align-items:center;
-padding-top:100px;
+padding-top:170px;
+padding-bottom:120px;
 }
 
 .hero-grid{
 display:grid;
 grid-template-columns:1.1fr 0.9fr;
-gap:70px;
+gap:80px;
 align-items:center;
 }
 
 .hero-tag{
 display:inline-block;
 padding:10px 18px;
-border-radius:50px;
-background:var(--light-orange);
+background:#fff7ed;
 color:var(--orange);
+border-radius:50px;
 font-size:0.85rem;
 font-weight:600;
 margin-bottom:28px;
 }
 
 .hero h1{
-font-size:5rem;
-line-height:1;
+font-size:5.5rem;
+line-height:0.95;
 font-weight:800;
-margin-bottom:24px;
+margin-bottom:28px;
 }
 
 .hero h1 span{
@@ -124,51 +135,78 @@ color:var(--orange);
 
 .hero p{
 font-size:1.1rem;
-line-height:1.9;
+line-height:2;
 color:var(--muted);
 max-width:650px;
+margin-bottom:40px;
 }
 
 .hero-buttons{
 display:flex;
 gap:18px;
-margin-top:40px;
 }
 
-.btn-primary{
+.primary-btn{
 background:var(--orange);
 color:white;
-padding:16px 30px;
+padding:18px 32px;
 border-radius:50px;
 text-decoration:none;
 font-weight:600;
 }
 
-.btn-secondary{
+.secondary-btn{
 border:1px solid var(--border);
-padding:16px 30px;
+padding:18px 32px;
 border-radius:50px;
 text-decoration:none;
 color:#111111;
 font-weight:600;
-background:white;
+}
+
+.hero-image{
+position:relative;
 }
 
 .hero-image img{
 width:100%;
-border-radius:24px;
+border-radius:28px;
 }
 
-/* GENERAL */
+.hero-card{
+position:absolute;
+bottom:30px;
+left:-40px;
+background:white;
+padding:24px;
+border-radius:20px;
+border:1px solid var(--border);
+width:240px;
+}
+
+.hero-card h3{
+font-size:2rem;
+color:var(--orange);
+margin-bottom:8px;
+}
+
+.hero-card p{
+font-size:0.9rem;
+line-height:1.6;
+color:var(--muted);
+}
+
+/* SECTION */
 
 section{
-padding:110px 0;
+padding:120px 0;
 }
 
 .section-title{
-font-size:3.5rem;
+font-size:4rem;
 font-weight:800;
-margin-bottom:20px;
+margin-bottom:24px;
+line-height:1;
 }
 
 .section-title span{
@@ -176,9 +214,9 @@ color:var(--orange);
 }
 
 .section-subtitle{
+max-width:720px;
 color:var(--muted);
-max-width:750px;
-line-height:1.9;
+line-height:2;
 margin-bottom:70px;
 }
 
@@ -191,26 +229,21 @@ gap:24px;
 }
 
 .about-card{
-background:white;
 padding:40px;
-border-radius:22px;
+border-radius:24px;
 border:1px solid var(--border);
-transition:0.3s;
-}
-
-.about-card:hover{
-transform:translateY(-5px);
+background:white;
 }
 
 .about-card h3{
+font-size:1.5rem;
 margin-bottom:18px;
-font-size:1.4rem;
 color:var(--orange);
 }
 
 .about-card p{
-line-height:1.8;
 color:var(--muted);
+line-height:1.9;
 }
 
 /* EXPERIENCE */
@@ -231,15 +264,14 @@ left:-50px;
 top:5px;
 width:18px;
 height:18px;
-border-radius:50%;
 background:var(--orange);
+border-radius:50%;
 }
 
 .timeline-content{
-padding:32px;
+padding:36px;
+border-radius:24px;
 border:1px solid var(--border);
-border-radius:22px;
-background:white;
 }
 
 .timeline-content h3{
@@ -254,7 +286,7 @@ margin-bottom:16px;
 
 .timeline-content p{
 color:var(--muted);
-line-height:1.8;
+line-height:1.9;
 }
 
 /* PROJECTS */
@@ -262,9 +294,9 @@ line-height:1.8;
 .project{
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:60px;
+gap:70px;
 align-items:center;
-margin-bottom:120px;
+margin-bottom:140px;
 }
 
 .project:nth-child(even){
@@ -277,42 +309,42 @@ direction:ltr;
 
 .project-image img{
 width:100%;
-border-radius:24px;
+border-radius:28px;
 }
 
 .project-content span{
 font-size:0.85rem;
 text-transform:uppercase;
 letter-spacing:1px;
-color:var(--orange);
 font-weight:600;
+color:var(--orange);
 }
 
 .project-content h3{
-font-size:2.8rem;
-margin:18px 0;
+font-size:3rem;
 line-height:1.1;
+margin:20px 0;
 }
 
 .project-content p{
 color:var(--muted);
-line-height:1.9;
-margin-bottom:24px;
+line-height:2;
+margin-bottom:28px;
 }
 
 .tools{
 display:flex;
-flex-wrap:wrap;
 gap:12px;
+flex-wrap:wrap;
 }
 
 .tools div{
 padding:10px 16px;
+background:#fff7ed;
 border-radius:50px;
-background:var(--light-orange);
 font-size:0.85rem;
-color:var(--orange);
 font-weight:500;
+color:var(--orange);
 }
 
 /* SKILLS */
@@ -324,14 +356,14 @@ gap:24px;
 }
 
 .skill-box{
-padding:36px;
-border-radius:22px;
+padding:40px;
+border-radius:24px;
 border:1px solid var(--border);
 }
 
 .skill-box h3{
-margin-bottom:24px;
 font-size:1.5rem;
+margin-bottom:24px;
 color:var(--orange);
 }
 
@@ -340,7 +372,7 @@ list-style:none;
 }
 
 .skill-box ul li{
-margin-bottom:14px;
+margin-bottom:16px;
 color:var(--muted);
 }
 
@@ -353,27 +385,26 @@ gap:24px;
 }
 
 .blog-card{
-padding:34px;
-border-radius:22px;
+padding:36px;
+border-radius:24px;
 border:1px solid var(--border);
 text-decoration:none;
 transition:0.3s;
-background:white;
 }
 
 .blog-card:hover{
-transform:translateY(-5px);
+transform:translateY(-4px);
 }
 
 .blog-card h3{
 color:#111111;
 margin-bottom:18px;
-font-size:1.4rem;
+font-size:1.5rem;
 }
 
 .blog-card p{
 color:var(--muted);
-line-height:1.8;
+line-height:1.9;
 }
 
 /* FOOTER */
@@ -381,19 +412,19 @@ line-height:1.8;
 footer{
 padding:120px 0 80px;
 text-align:center;
-border-top:1px solid var(--border);
+border-top:1px solid #f1f1f1;
 }
 
 footer h2{
-font-size:3.5rem;
+font-size:4rem;
 margin-bottom:24px;
 }
 
 footer p{
-color:var(--muted);
 max-width:700px;
 margin:auto;
-line-height:1.9;
+color:var(--muted);
+line-height:2;
 margin-bottom:40px;
 }
 
@@ -410,7 +441,7 @@ color:var(--orange);
 font-weight:600;
 }
 
-/* RESPONSIVE */
+/* MOBILE */
 
 @media(max-width:1000px){
 
@@ -423,11 +454,11 @@ grid-template-columns:1fr;
 }
 
 .hero h1{
-font-size:3.8rem;
+font-size:4rem;
 }
 
 .section-title{
-font-size:2.8rem;
+font-size:3rem;
 }
 
 .project:nth-child(even){
@@ -435,6 +466,10 @@ direction:ltr;
 }
 
 nav ul{
+display:none;
+}
+
+.hero-card{
 display:none;
 }
 
@@ -454,11 +489,508 @@ font-size:2.3rem;
 flex-direction:column;
 }
 
-.btn-primary,
-.btn-secondary{
+.primary-btn,
+.secondary-btn{
 text-align:center;
 }
 
 }
 
 </style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="container">
+
+<nav>
+
+<div class="logo">
+VK
+</div>
+
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#experience">Experience</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#blogs">Blogs</a></li>
+</ul>
+
+<a href="#contact" class="contact-btn">
+Contact
+</a>
+
+</nav>
+
+</div>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="container hero-grid">
+
+<div>
+
+<div class="hero-tag">
+CONSTRUCTION TECHNOLOGY • ANALYTICS • PROJECT CONTROLS
+</div>
+
+<h1>
+VINOD <span>KRISHNAA</span>
+</h1>
+
+<p>
+Construction Management graduate student at Arizona State University focused on project controls, infrastructure systems, AI-driven analytics, and modern construction operations.
+</p>
+
+<div class="hero-buttons">
+
+<a href="#projects" class="primary-btn">
+View Projects
+</a>
+
+<a href="https://www.linkedin.com/in/vk2510/" target="_blank" class="secondary-btn">
+LinkedIn
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-image">
+
+<img src="images/profile.jpg" alt="Vinod Krishnaa">
+
+<div class="hero-card">
+<h3>4+</h3>
+<p>
+Construction analytics and infrastructure research projects
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<div class="container">
+
+<h2 class="section-title">
+About <span>Me</span>
+</h2>
+
+<p class="section-subtitle">
+I combine field operations, transportation systems, project management, AI-driven analytics, and infrastructure technology to improve construction project delivery.
+</p>
+
+<div class="about-grid">
+
+<div class="about-card">
+
+<h3>
+Construction Operations
+</h3>
+
+<p>
+Experienced in RFIs, submittals, project coordination, drawing workflows, and field communication.
+</p>
+
+</div>
+
+<div class="about-card">
+
+<h3>
+Analytics & AI
+</h3>
+
+<p>
+Applying Power BI, predictive analytics, machine learning, and AI systems to construction operations.
+</p>
+
+</div>
+
+<div class="about-card">
+
+<h3>
+Infrastructure Systems
+</h3>
+
+<p>
+Focused on roadway systems, transportation engineering, smart infrastructure, and construction innovation.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- EXPERIENCE -->
+
+<section id="experience">
+
+<div class="container">
+
+<h2 class="section-title">
+Professional <span>Experience</span>
+</h2>
+
+<div class="timeline">
+
+<div class="timeline-item">
+
+<div class="timeline-dot"></div>
+
+<div class="timeline-content">
+
+<h3>
+Operations Intern
+</h3>
+
+<h4>
+Willmeng Construction • Phoenix
+</h4>
+
+<p>
+Supported project managers on industrial construction projects involving RFIs, documentation workflows, drawing coordination, and subcontractor communication.
+</p>
+
+</div>
+
+</div>
+
+<div class="timeline-item">
+
+<div class="timeline-dot"></div>
+
+<div class="timeline-content">
+
+<h3>
+Graduate Service Assistant
+</h3>
+
+<h4>
+Arizona State University
+</h4>
+
+<p>
+Supported construction management instruction, grading systems, student mentorship, and course coordination.
+</p>
+
+</div>
+
+</div>
+
+<div class="timeline-item">
+
+<div class="timeline-dot"></div>
+
+<div class="timeline-content">
+
+<h3>
+Construction Management Intern
+</h3>
+
+<h4>
+URC Construction
+</h4>
+
+<p>
+Worked on scheduling, project tracking, documentation, and infrastructure coordination for metro bridge projects.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PROJECTS -->
+
+<section id="projects">
+
+<div class="container">
+
+<h2 class="section-title">
+Featured <span>Projects</span>
+</h2>
+
+<div class="project">
+
+<div class="project-image">
+
+<img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1400&auto=format&fit=crop">
+
+</div>
+
+<div class="project-content">
+
+<span>
+Transportation Analytics
+</span>
+
+<h3>
+ADOT Estimate Price Analysis
+</h3>
+
+<p>
+Analyzed Arizona highway construction estimate data to identify pricing variability patterns and improve budgeting reliability.
+</p>
+
+<div class="tools">
+
+<div>Excel</div>
+<div>Analytics</div>
+<div>AI</div>
+<div>Estimating</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="project">
+
+<div class="project-image">
+
+<img src="https://images.unsplash.com/photo-1513828583688-c52646db42da?q=80&w=1400&auto=format&fit=crop">
+
+</div>
+
+<div class="project-content">
+
+<span>
+IoT Infrastructure
+</span>
+
+<h3>
+Smart Landslide Warning System
+</h3>
+
+<p>
+Developed an IoT-based slope monitoring prototype integrating weather analysis, soil sensors, and automated warning systems.
+</p>
+
+<div class="tools">
+
+<div>Arduino</div>
+<div>IoT</div>
+<div>Sensors</div>
+<div>Safety Systems</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="project">
+
+<div class="project-image">
+
+<img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1400&auto=format&fit=crop">
+
+</div>
+
+<div class="project-content">
+
+<span>
+Machine Learning
+</span>
+
+<h3>
+Pavement Performance Modeling
+</h3>
+
+<p>
+Built roadway deterioration prediction models using PCI analysis, transportation datasets, and statistical forecasting.
+</p>
+
+<div class="tools">
+
+<div>Python</div>
+<div>Machine Learning</div>
+<div>Transportation</div>
+<div>Analytics</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- SKILLS -->
+
+<section id="skills">
+
+<div class="container">
+
+<h2 class="section-title">
+Technical <span>Skills</span>
+</h2>
+
+<div class="skills-grid">
+
+<div class="skill-box">
+
+<h3>
+Project Controls
+</h3>
+
+<ul>
+<li>Primavera P6</li>
+<li>Microsoft Project</li>
+<li>Scheduling</li>
+<li>RFIs & Submittals</li>
+<li>Project Documentation</li>
+</ul>
+
+</div>
+
+<div class="skill-box">
+
+<h3>
+Analytics
+</h3>
+
+<ul>
+<li>Power BI</li>
+<li>Python</li>
+<li>Excel Analytics</li>
+<li>Machine Learning</li>
+<li>AI Workflows</li>
+</ul>
+
+</div>
+
+<div class="skill-box">
+
+<h3>
+Engineering
+</h3>
+
+<ul>
+<li>Transportation Engineering</li>
+<li>AutoCAD</li>
+<li>Roadway Systems</li>
+<li>Infrastructure Analytics</li>
+<li>Construction Technology</li>
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- BLOGS -->
+
+<section id="blogs">
+
+<div class="container">
+
+<h2 class="section-title">
+Writing & <span>Thoughts</span>
+</h2>
+
+<div class="blog-grid">
+
+<a class="blog-card" href="https://vinodkrishnaa.medium.com/why-i-chose-this-path-9b690c1a735a" target="_blank">
+
+<h3>
+Why I Chose This Path
+</h3>
+
+<p>
+A personal reflection on engineering, growth, leadership, and professional direction.
+</p>
+
+</a>
+
+<a class="blog-card" href="https://vinodkrishnaa.medium.com/engineering-in-2-years-my-life-cit-de496f57082a" target="_blank">
+
+<h3>
+Engineering in 2 Years
+</h3>
+
+<p>
+Experiences, lessons, and transformation during undergraduate engineering education.
+</p>
+
+</a>
+
+<a class="blog-card" href="https://vinodkrishnaa.medium.com/why-civil-engineering-matters-74fff8448fb6" target="_blank">
+
+<h3>
+Why Civil Engineering Matters
+</h3>
+
+<p>
+Thoughts on infrastructure systems, society, and the future of civil engineering.
+</p>
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer id="contact">
+
+<div class="container">
+
+<h2>
+Let's Build Something Meaningful
+</h2>
+
+<p>
+Open to opportunities in project engineering, project controls, construction analytics, and infrastructure technology.
+</p>
+
+<div class="footer-links">
+
+<a href="mailto:vinodkrishnaa02@gmail.com">
+vinodkrishnaa02@gmail.com
+</a>
+
+<a href="https://www.linkedin.com/in/vk2510/" target="_blank">
+LinkedIn
+</a>
+
+</div>
+
+</div>
+
+</footer>
+
+</body>
+</html>
