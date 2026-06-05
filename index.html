@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,158 +27,158 @@ scroll-behavior:smooth;
 body{
 font-family:'Inter',sans-serif;
 background:#ffffff;
-color:#111111;
+color:#111827;
 overflow-x:hidden;
 }
 
 :root{
---orange:#f97316;
---light:#fff7ed;
---text:#111111;
---muted:#666666;
---border:#ececec;
+--dark:#111827;
+--light:#f5f5f5;
+--accent:#2563eb;
+--muted:#6b7280;
+--border:#e5e7eb;
+}
+
+a{
+text-decoration:none;
 }
 
 .container{
 width:90%;
-max-width:1280px;
+max-width:1300px;
 margin:auto;
 }
 
-/* NAVBAR */
+/* NAVIGATION */
 
 header{
 position:fixed;
 top:0;
+left:0;
 width:100%;
 background:rgba(255,255,255,0.95);
 backdrop-filter:blur(10px);
-border-bottom:1px solid #f3f3f3;
 z-index:1000;
+border-bottom:1px solid var(--border);
 }
 
 nav{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:24px 0;
+padding:22px 0;
 }
 
 .logo{
-font-size:1.7rem;
+font-size:1.5rem;
 font-weight:800;
-color:var(--orange);
+color:var(--dark);
 }
 
-.contact-btn{
-background:var(--orange);
-color:white;
-padding:14px 24px;
-border-radius:50px;
-text-decoration:none;
+.nav-links{
+display:flex;
+gap:30px;
+}
+
+.nav-links a{
+color:var(--dark);
 font-weight:600;
 }
 
 /* HERO */
 
 .hero{
-padding-top:170px;
-padding-bottom:120px;
+min-height:100vh;
+display:grid;
+grid-template-columns:1fr 1fr;
+margin-top:80px;
 }
 
-.hero-grid{
-display:grid;
-grid-template-columns:1.1fr 0.9fr;
-gap:80px;
+.hero-left{
+background:#f7f7f7;
+display:flex;
 align-items:center;
+justify-content:center;
+padding:80px;
+}
+
+.hero-content{
+max-width:520px;
 }
 
 .hero-tag{
-display:inline-block;
-padding:10px 18px;
-background:var(--light);
-border-radius:50px;
-color:var(--orange);
-font-size:0.85rem;
+font-size:0.9rem;
 font-weight:600;
-margin-bottom:28px;
+letter-spacing:2px;
+text-transform:uppercase;
+color:var(--accent);
+margin-bottom:20px;
 }
 
 .hero h1{
-font-size:6rem;
+font-size:5rem;
 line-height:0.95;
 font-weight:800;
-margin-bottom:30px;
+margin-bottom:25px;
 }
 
-.hero h1 span{
-color:var(--orange);
-}
-
-.hero p{
-font-size:1.1rem;
-line-height:2;
+.hero h2{
+font-size:1.25rem;
+font-weight:500;
+line-height:1.8;
 color:var(--muted);
-max-width:650px;
-margin-bottom:40px;
+margin-bottom:30px;
 }
 
 .hero-buttons{
 display:flex;
-gap:18px;
+gap:15px;
+margin-bottom:35px;
 }
 
-.primary-btn{
-background:var(--orange);
+.btn-primary{
+background:var(--dark);
 color:white;
-padding:18px 34px;
+padding:16px 28px;
 border-radius:50px;
-text-decoration:none;
 font-weight:600;
 }
 
-.secondary-btn{
-border:1px solid var(--border);
-padding:18px 34px;
+.btn-secondary{
+border:1px solid var(--dark);
+color:var(--dark);
+padding:16px 28px;
 border-radius:50px;
-text-decoration:none;
-color:#111111;
 font-weight:600;
 }
 
-.hero-image{
-position:relative;
+.social-links{
+display:flex;
+gap:25px;
+flex-wrap:wrap;
 }
 
-.hero-image img{
+.social-links a{
+color:var(--dark);
+font-weight:600;
+}
+
+.hero-right{
+background:var(--dark);
+display:flex;
+align-items:center;
+justify-content:center;
+padding:40px;
+}
+
+.hero-right img{
 width:100%;
-border-radius:28px;
-}
-
-.hero-card{
-position:absolute;
-bottom:30px;
-left:-40px;
-background:white;
-padding:24px;
+max-width:600px;
+height:auto;
 border-radius:20px;
-border:1px solid var(--border);
-width:240px;
 }
 
-.hero-card h3{
-font-size:2rem;
-color:var(--orange);
-margin-bottom:8px;
-}
-
-.hero-card p{
-font-size:0.9rem;
-line-height:1.6;
-color:var(--muted);
-}
-
-/* GENERAL */
+/* GENERAL SECTIONS */
 
 section{
 padding:120px 0;
@@ -185,130 +186,64 @@ padding:120px 0;
 
 .section-title{
 font-size:4rem;
-line-height:1;
 font-weight:800;
-margin-bottom:24px;
-}
-
-.section-title span{
-color:var(--orange);
+margin-bottom:20px;
 }
 
 .section-subtitle{
+font-size:1.1rem;
+color:var(--muted);
 max-width:700px;
-line-height:2;
-color:var(--muted);
-margin-bottom:70px;
+line-height:1.8;
+margin-bottom:60px;
 }
 
-/* ABOUT */
+/* PROJECTS */
 
-.about{
-padding-top:40px;
-}
-
-.about-box{
-max-width:900px;
-}
-
-.about-box p{
-font-size:1.05rem;
-line-height:2;
-color:var(--muted);
-}
-
-/* EXPERIENCE */
-
-.timeline{
-border-left:2px solid #fed7aa;
-padding-left:40px;
-}
-
-.timeline-item{
-margin-bottom:50px;
-position:relative;
-}
-
-.timeline-dot{
-position:absolute;
-left:-50px;
-top:5px;
-width:18px;
-height:18px;
-border-radius:50%;
-background:var(--orange);
-}
-
-.timeline-content{
-padding:36px;
-border-radius:24px;
-border:1px solid var(--border);
-}
-
-.timeline-content h3{
-font-size:1.5rem;
-margin-bottom:10px;
-}
-
-.timeline-content h4{
-color:var(--orange);
-margin-bottom:16px;
-}
-
-.timeline-content p{
-line-height:1.9;
-color:var(--muted);
-}
-
-/* FEATURED BLOCKS */
-
-.feature-grid{
+.project-grid{
 display:grid;
 grid-template-columns:repeat(3,1fr);
-gap:24px;
+gap:30px;
 }
 
-.feature-card{
+.project-card{
 border:1px solid var(--border);
-border-radius:28px;
+border-radius:24px;
 overflow:hidden;
-text-decoration:none;
 transition:0.3s;
 background:white;
 }
 
-.feature-card:hover{
-transform:translateY(-5px);
+.project-card:hover{
+transform:translateY(-6px);
 }
 
-.feature-card img{
+.project-card img{
 width:100%;
-height:260px;
+height:250px;
 object-fit:cover;
 }
 
-.feature-content{
-padding:32px;
+.project-content{
+padding:30px;
 }
 
-.feature-content span{
+.project-content span{
 font-size:0.85rem;
-color:var(--orange);
-font-weight:600;
-text-transform:uppercase;
+font-weight:700;
 letter-spacing:1px;
+text-transform:uppercase;
+color:var(--accent);
 }
 
-.feature-content h3{
-font-size:1.7rem;
-line-height:1.3;
-margin:18px 0;
-color:#111111;
+.project-content h3{
+font-size:1.5rem;
+margin:15px 0;
 }
 
-.feature-content p{
+.project-content p{
+line-height:1.8;
 color:var(--muted);
-line-height:1.9;
 }
 
 /* BLOGS */
@@ -316,400 +251,276 @@ line-height:1.9;
 .blog-grid{
 display:grid;
 grid-template-columns:repeat(3,1fr);
-gap:24px;
+gap:30px;
 }
 
 .blog-card{
-padding:40px;
-border-radius:28px;
 border:1px solid var(--border);
-text-decoration:none;
+border-radius:24px;
+padding:35px;
 transition:0.3s;
 background:white;
-display:flex;
-flex-direction:column;
-justify-content:space-between;
-min-height:320px;
+color:inherit;
 }
 
 .blog-card:hover{
-transform:translateY(-5px);
+transform:translateY(-6px);
 }
 
 .blog-card span{
 font-size:0.85rem;
-font-weight:600;
-color:var(--orange);
-text-transform:uppercase;
+font-weight:700;
 letter-spacing:1px;
+text-transform:uppercase;
+color:var(--accent);
 }
 
 .blog-card h3{
-font-size:1.7rem;
-line-height:1.3;
-margin:18px 0;
-color:#111111;
+font-size:1.5rem;
+margin:15px 0;
 }
 
 .blog-card p{
-line-height:1.9;
+line-height:1.8;
 color:var(--muted);
 }
 
-.more-card{
-background:var(--orange);
+.featured-blog{
+background:var(--dark);
 color:white;
 }
 
-.more-card span,
-.more-card h3,
-.more-card p{
+.featured-blog p,
+.featured-blog span{
 color:white;
 }
 
 /* FOOTER */
 
 footer{
-padding:120px 0 80px;
-border-top:1px solid #f1f1f1;
+padding:100px 0;
+border-top:1px solid var(--border);
 text-align:center;
 }
 
 footer h2{
-font-size:4rem;
-margin-bottom:24px;
+font-size:3rem;
+margin-bottom:20px;
 }
 
 footer p{
 max-width:700px;
 margin:auto;
-line-height:2;
+line-height:1.8;
 color:var(--muted);
-margin-bottom:40px;
+margin-bottom:35px;
 }
 
 .footer-links{
 display:flex;
 justify-content:center;
-gap:24px;
+gap:25px;
 flex-wrap:wrap;
 }
 
 .footer-links a{
-text-decoration:none;
-color:var(--orange);
 font-weight:600;
+color:var(--dark);
 }
 
 /* RESPONSIVE */
 
 @media(max-width:1000px){
 
-.hero-grid,
-.feature-grid,
+.hero{
+grid-template-columns:1fr;
+}
+
+.project-grid,
 .blog-grid{
 grid-template-columns:1fr;
 }
 
 .hero h1{
-font-size:4rem;
+font-size:3.5rem;
 }
 
 .section-title{
-font-size:3rem;
+font-size:2.8rem;
 }
 
-.hero-card{
-display:none;
+.hero-left{
+padding:60px 30px;
 }
 
 }
 
 @media(max-width:600px){
 
-.hero h1{
-font-size:3rem;
-}
-
-.section-title{
-font-size:2.3rem;
-}
-
 .hero-buttons{
 flex-direction:column;
 }
 
-.primary-btn,
-.secondary-btn{
-text-align:center;
+.hero h1{
+font-size:3rem;
 }
 
 }
 
 </style>
-
 </head>
 
 <body>
 
 <header>
-
 <div class="container">
 
 <nav>
 
 <div class="logo">
-VK
+VK.
 </div>
 
-<a href="#contact" class="contact-btn">
-Contact
-</a>
+<div class="nav-links">
+<a href="#projects">Projects</a>
+<a href="#blogs">Blogs</a>
+<a href="https://www.linkedin.com/in/vk2510/" target="_blank">LinkedIn</a>
+</div>
 
 </nav>
 
 </div>
-
 </header>
 
 <!-- HERO -->
 
 <section class="hero">
 
-<div class="container hero-grid">
+<div class="hero-left">
 
-<div>
+<div class="hero-content">
 
 <div class="hero-tag">
-CONSTRUCTION TECHNOLOGY • ANALYTICS • PROJECT CONTROLS
+Construction Technology • Project Controls
 </div>
 
 <h1>
-VINOD <span>KRISHNAA</span>
+Vinod Krishnaa
 </h1>
 
-<p>
-Construction Management graduate student at Arizona State University focused on infrastructure systems, project controls, AI-driven analytics, and modern construction operations.
-</p>
+<h2>
+MS Construction Management & Technology student at Arizona State University focused on project controls, infrastructure analytics, AI-driven construction workflows, and transportation systems.
+</h2>
 
 <div class="hero-buttons">
 
-<a href="#featured" class="primary-btn">
-View Work
+<a href="#projects" class="btn-primary">
+View Projects
 </a>
 
-<a href="https://www.linkedin.com/in/vk2510/" target="_blank" class="secondary-btn">
+<a href="#blogs" class="btn-secondary">
+Read Blogs
+</a>
+
+</div>
+
+<div class="social-links">
+
+<a href="mailto:vinodkrishnaa02@gmail.com">
+Email
+</a>
+
+<a href="https://www.linkedin.com/in/vk2510/" target="_blank">
 LinkedIn
 </a>
 
+<a href="https://vinodkrishnaa.medium.com/" target="_blank">
+Medium
+</a>
+
+</div>
+
 </div>
 
 </div>
 
-<div class="hero-image">
+<div class="hero-right">
 
-<img src="images/profile.jpg" alt="Vinod Krishnaa">
-
-<div class="hero-card">
-<h3>4+</h3>
-<p>
-Infrastructure analytics and construction technology projects
-</p>
-</div>
-
-</div>
+<img src="images/vinod.jpg" alt="Vinod Krishnaa">
 
 </div>
 
 </section>
 
-<!-- ABOUT -->
+<!-- PROJECTS -->
 
-<section class="about">
-
-<div class="container">
-
-<div class="about-box">
-
-<h2 class="section-title">
-Building Smarter <span>Infrastructure</span>
-</h2>
-
-<p>
-I combine construction operations, transportation systems, infrastructure analytics, and project controls to improve how modern infrastructure projects are planned and delivered. My work focuses on applying AI-driven workflows, predictive analytics, and construction technology to real-world engineering challenges.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- EXPERIENCE -->
-
-<section>
+<section id="projects">
 
 <div class="container">
 
 <h2 class="section-title">
-Experience & <span>Leadership</span>
-</h2>
-
-<div class="timeline">
-
-<div class="timeline-item">
-
-<div class="timeline-dot"></div>
-
-<div class="timeline-content">
-
-<h3>
-Operations Intern
-</h3>
-
-<h4>
-Willmeng Construction • Phoenix
-</h4>
-
-<p>
-Supported industrial construction projects through RFIs, documentation workflows, drawing coordination, subcontractor communication, and project controls support.
-</p>
-
-</div>
-
-</div>
-
-<div class="timeline-item">
-
-<div class="timeline-dot"></div>
-
-<div class="timeline-content">
-
-<h3>
-Graduate Service Assistant
-</h3>
-
-<h4>
-Arizona State University
-</h4>
-
-<p>
-Supported construction management instruction, grading systems, course coordination, and student mentorship activities.
-</p>
-
-</div>
-
-</div>
-
-<div class="timeline-item">
-
-<div class="timeline-dot"></div>
-
-<div class="timeline-content">
-
-<h3>
-Construction Management Intern
-</h3>
-
-<h4>
-URC Construction
-</h4>
-
-<p>
-Worked on scheduling, project tracking, infrastructure coordination, and documentation systems for metro bridge construction projects.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- FEATURED PROJECTS -->
-
-<section id="featured">
-
-<div class="container">
-
-<h2 class="section-title">
-Featured <span>Projects</span>
+Projects
 </h2>
 
 <p class="section-subtitle">
-A selection of infrastructure analytics, AI, transportation systems, and construction technology projects.
+A selection of infrastructure analytics, transportation systems, AI applications, and construction technology projects.
 </p>
 
-<div class="feature-grid">
+<div class="project-grid">
 
-<a href="#" class="feature-card">
+<div class="project-card">
 
 <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1400&auto=format&fit=crop">
 
-<div class="feature-content">
+<div class="project-content">
 
-<span>
-Transportation Analytics
-</span>
+<span>Transportation Analytics</span>
 
-<h3>
-ADOT Estimate Price Analysis
-</h3>
+<h3>ADOT Estimate Price Analysis</h3>
 
 <p>
-Analyzed highway estimate pricing variability across infrastructure projects to improve budgeting reliability.
+Analyzed highway estimate pricing variability across transportation infrastructure projects to improve budgeting reliability and planning accuracy.
 </p>
 
 </div>
 
-</a>
+</div>
 
-<a href="#" class="feature-card">
+<div class="project-card">
 
 <img src="https://images.unsplash.com/photo-1513828583688-c52646db42da?q=80&w=1400&auto=format&fit=crop">
 
-<div class="feature-content">
+<div class="project-content">
 
-<span>
-IoT Infrastructure
-</span>
+<span>IoT Infrastructure</span>
 
-<h3>
-Smart Landslide Warning System
-</h3>
+<h3>Smart Landslide Warning System</h3>
 
 <p>
-Developed an IoT-based slope monitoring prototype integrating sensors and automated warning systems.
+Developed a sensor-based monitoring system integrating IoT technologies for slope stability assessment and automated warning generation.
 </p>
 
 </div>
 
-</a>
+</div>
 
-<a href="#" class="feature-card">
+<div class="project-card">
 
 <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1400&auto=format&fit=crop">
 
-<div class="feature-content">
+<div class="project-content">
 
-<span>
-Machine Learning
-</span>
+<span>Machine Learning</span>
 
-<h3>
-Pavement Performance Modeling
-</h3>
+<h3>Pavement Performance Modeling</h3>
 
 <p>
-Built roadway deterioration prediction models using transportation datasets and forecasting systems.
+Created roadway deterioration prediction models using transportation datasets and machine learning forecasting techniques.
 </p>
 
 </div>
 
-</a>
+</div>
 
 </div>
 
@@ -719,73 +530,59 @@ Built roadway deterioration prediction models using transportation datasets and 
 
 <!-- BLOGS -->
 
-<section>
+<section id="blogs">
 
 <div class="container">
 
 <h2 class="section-title">
-Writing & <span>Thoughts</span>
+Blogs
 </h2>
+
+<p class="section-subtitle">
+Thoughts on engineering, growth, leadership, infrastructure, and professional development.
+</p>
 
 <div class="blog-grid">
 
-<a class="blog-card" href="https://vinodkrishnaa.medium.com/why-i-chose-this-path-9b690c1a735a" target="_blank">
+<a class="blog-card"
+href="https://vinodkrishnaa.medium.com/why-i-chose-this-path-9b690c1a735a"
+target="_blank">
 
-<div>
+<span>Latest Article</span>
 
-<span>
-Latest Blog
-</span>
-
-<h3>
-Why I Chose This Path
-</h3>
+<h3>Why I Chose This Path</h3>
 
 <p>
 A personal reflection on engineering, growth, leadership, and professional direction.
 </p>
 
-</div>
-
 </a>
 
-<a class="blog-card" href="https://vinodkrishnaa.medium.com/engineering-in-2-years-my-life-cit-de496f57082a" target="_blank">
+<a class="blog-card"
+href="https://vinodkrishnaa.medium.com/engineering-in-2-years-my-life-cit-de496f57082a"
+target="_blank">
 
-<div>
+<span>Latest Article</span>
 
-<span>
-Latest Blog
-</span>
-
-<h3>
-Engineering in 2 Years
-</h3>
+<h3>Engineering in 2 Years</h3>
 
 <p>
 Experiences, lessons, and transformation during undergraduate engineering education.
 </p>
 
-</div>
-
 </a>
 
-<a class="blog-card more-card" href="https://vinodkrishnaa.medium.com/" target="_blank">
+<a class="blog-card featured-blog"
+href="https://vinodkrishnaa.medium.com/"
+target="_blank">
 
-<div>
+<span>More Articles</span>
 
-<span>
-More Blogs
-</span>
-
-<h3>
-Read All Articles
-</h3>
+<h3>Read All Blogs</h3>
 
 <p>
-Explore more thoughts, engineering reflections, infrastructure discussions, and personal writing.
+Explore more engineering reflections, infrastructure discussions, and personal writing.
 </p>
-
-</div>
 
 </a>
 
@@ -797,29 +594,29 @@ Explore more thoughts, engineering reflections, infrastructure discussions, and 
 
 <!-- FOOTER -->
 
-<footer id="contact">
-
-<div class="container">
+<footer>
 
 <h2>
-Let's Build Something Meaningful
+Let's Build Better Infrastructure
 </h2>
 
 <p>
-Open to opportunities in project engineering, project controls, infrastructure analytics, and construction technology.
+Open to opportunities in Project Engineering, Project Controls, Infrastructure Analytics, and Construction Technology.
 </p>
 
 <div class="footer-links">
 
 <a href="mailto:vinodkrishnaa02@gmail.com">
-vinodkrishnaa02@gmail.com
+Email
 </a>
 
 <a href="https://www.linkedin.com/in/vk2510/" target="_blank">
 LinkedIn
 </a>
 
-</div>
+<a href="https://vinodkrishnaa.medium.com/" target="_blank">
+Medium
+</a>
 
 </div>
 
@@ -827,3 +624,4 @@ LinkedIn
 
 </body>
 </html>
+```
