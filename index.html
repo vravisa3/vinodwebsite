@@ -4,407 +4,681 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vinod Krishnaa | Portfolio</title>
+<title>Vinod Krishnaa | Civil & Construction Engineer</title>
+<meta name="description" content="Vinod Krishnaa — Civil & Construction Engineer specialising in infrastructure analytics, project controls, and construction technology. Open to opportunities in the US.">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Vinod Krishnaa | Civil & Construction Engineer">
+<meta property="og:description" content="Building better infrastructure — project engineering, construction management, and analytics.">
+<meta property="og:image" content="images/vinod.jpg.jpeg">
+<meta property="og:type" content="website">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-font-family:'Manrope',sans-serif;
-background:#f8f8f6;
-color:#111;
-overflow-x:hidden;
-}
-.container{width:90%;max-width:1300px;margin:auto}
-header{
-padding:30px 0;
-position:fixed;
-width:100%;
-top:0;
-background:rgba(248,248,246,.9);
-backdrop-filter:blur(12px);
-z-index:100;
-}
-.logo{font-size:1.7rem;font-weight:800}
+  /* ── Reset ── */
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
 
-.hero{
-min-height:100vh;
-display:grid;
-grid-template-columns:1.1fr .9fr;
-align-items:center;
-gap:60px;
-padding-top:120px;
-}
+  /* ── Base ── */
+  body {
+    font-family: 'Manrope', sans-serif;
+    background: #f8f8f6;
+    color: #111;
+    overflow-x: hidden;
+  }
 
-.hero-tag{
-font-size:.85rem;
-letter-spacing:2px;
-color:#2563eb;
-font-weight:700;
-margin-bottom:30px;
-}
+  .container {
+    width: 90%;
+    max-width: 1300px;
+    margin: auto;
+  }
 
-.hero h1{
-font-size:6.5rem;
-line-height:.9;
-font-weight:800;
-margin-bottom:25px;
-}
+  /* ── Header ── */
+  header {
+    padding: 28px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: rgba(248, 248, 246, 0.92);
+    backdrop-filter: blur(12px);
+    z-index: 100;
+    border-bottom: 1px solid rgba(0,0,0,.06);
+  }
 
-.hero p{
-font-size:1.15rem;
-line-height:2;
-color:#666;
-max-width:600px;
-margin-bottom:35px;
-}
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 
-.hero-buttons{
-display:flex;
-gap:15px;
-flex-wrap:wrap;
-}
+  .logo {
+    font-size: 1.25rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+  }
 
-.btn{
-padding:16px 30px;
-border-radius:999px;
-font-weight:700;
-text-decoration:none;
-}
+  nav {
+    display: flex;
+    gap: 32px;
+  }
 
-.btn-dark{
-background:#111;
-color:#fff;
-}
+  nav a {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: .9rem;
+    color: #555;
+    transition: color .2s;
+  }
 
-.btn-light{
-background:#fff;
-color:#111;
-box-shadow:0 10px 40px rgba(0,0,0,.08);
-}
+  nav a:hover { color: #111; }
 
-.hero-image img{
-width:100%;
-max-width:560px;
-display:block;
-margin:auto;
-border-radius:30px;
-box-shadow:0 30px 80px rgba(0,0,0,.12);
-}
+  /* ── Hero ── */
+  .hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+    align-items: center;
+    gap: 60px;
+    padding-top: 110px;
+  }
 
-section{
-padding:120px 0;
-}
+  .hero-tag {
+    display: inline-block;
+    font-size: .8rem;
+    letter-spacing: 2px;
+    color: #2563eb;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 28px;
+  }
 
-.section-title{
-font-size:4rem;
-font-weight:800;
-margin-bottom:20px;
-}
+  .hero h1 {
+    font-size: 6.5rem;
+    line-height: .92;
+    font-weight: 800;
+    margin-bottom: 28px;
+  }
 
-.section-sub{
-max-width:700px;
-color:#666;
-line-height:2;
-margin-bottom:50px;
-}
+  .hero-desc {
+    font-size: 1.1rem;
+    line-height: 1.9;
+    color: #666;
+    max-width: 540px;
+    margin-bottom: 38px;
+  }
 
-.grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:28px;
-}
+  .hero-buttons {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
 
-.card{
-background:#fff;
-border-radius:28px;
-overflow:hidden;
-box-shadow:0 10px 40px rgba(0,0,0,.06);
-transition:.3s;
-text-decoration:none;
-color:#111;
-}
+  .btn {
+    padding: 15px 28px;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: .95rem;
+    text-decoration: none;
+    transition: transform .2s, box-shadow .2s;
+  }
 
-.card:hover{
-transform:translateY(-8px);
-}
+  .btn:hover { transform: translateY(-2px); }
 
-.card img{
-width:100%;
-height:250px;
-object-fit:cover;
-}
+  .btn-dark {
+    background: #111;
+    color: #fff;
+    box-shadow: 0 8px 24px rgba(0,0,0,.18);
+  }
 
-.card-content{
-padding:30px;
-}
+  .btn-light {
+    background: #fff;
+    color: #111;
+    box-shadow: 0 8px 30px rgba(0,0,0,.09);
+  }
 
-.card span{
-font-size:.8rem;
-font-weight:800;
-letter-spacing:1px;
-color:#2563eb;
-text-transform:uppercase;
-}
+  .hero-image img {
+    width: 100%;
+    max-width: 520px;
+    display: block;
+    margin: auto;
+    border-radius: 32px;
+    box-shadow: 0 30px 80px rgba(0,0,0,.13);
+    object-fit: cover;
+    aspect-ratio: 4/5;
+  }
 
-.card h3{
-font-size:1.5rem;
-margin:15px 0;
-}
+  /* ── Sections ── */
+  section { padding: 110px 0; }
 
-.card-content p{
-line-height:1.9;
-color:#555;
-font-size:0.98rem;
-}
+  .section-title {
+    font-size: 3.8rem;
+    font-weight: 800;
+    margin-bottom: 16px;
+    line-height: 1.05;
+  }
 
-footer{
-padding:100px 0;
-text-align:center;
-}
+  .section-sub {
+    max-width: 680px;
+    color: #666;
+    line-height: 1.9;
+    margin-bottom: 56px;
+    font-size: 1.05rem;
+  }
 
-footer h2{
-font-size:3rem;
-margin-bottom:20px;
-}
+  /* ── About ── */
+  #about { background: #fff; }
 
-footer p{
-max-width:700px;
-margin:auto;
-line-height:2;
-color:#666;
-margin-bottom:30px;
-}
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
 
-.links{
-display:flex;
-justify-content:center;
-gap:25px;
-flex-wrap:wrap;
-}
+  .about-image img {
+    width: 100%;
+    border-radius: 28px;
+    box-shadow: 0 20px 60px rgba(0,0,0,.1);
+    object-fit: cover;
+    aspect-ratio: 1/1;
+  }
 
-.links a{
-text-decoration:none;
-font-weight:700;
-color:#111;
-}
+  .about-text .label {
+    font-size: .8rem;
+    letter-spacing: 2px;
+    color: #2563eb;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    display: block;
+  }
 
-@media(max-width:1000px){
-.hero{
-grid-template-columns:1fr;
-text-align:center;
-}
-.hero p{margin:auto auto 35px}
-.hero-buttons{justify-content:center}
-.grid{grid-template-columns:1fr}
-.hero h1{font-size:4rem}
-.section-title{font-size:3rem}
-}
+  .about-text h2 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    margin-bottom: 24px;
+    line-height: 1.1;
+  }
+
+  .about-text p {
+    color: #555;
+    line-height: 1.95;
+    font-size: 1.05rem;
+    margin-bottom: 16px;
+  }
+
+  /* ── Education ── */
+  .edu-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  .edu-card {
+    background: #fff;
+    border-radius: 24px;
+    padding: 36px 40px;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    box-shadow: 0 8px 30px rgba(0,0,0,.06);
+    transition: transform .25s;
+  }
+
+  .edu-card:hover { transform: translateY(-4px); }
+
+  .edu-logo {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    flex-shrink: 0;
+  }
+
+  .edu-year {
+    font-size: .82rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    color: #2563eb;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  .edu-body h3 {
+    font-size: 1.25rem;
+    font-weight: 800;
+    margin-bottom: 6px;
+  }
+
+  .edu-body .uni {
+    font-size: .95rem;
+    color: #444;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+
+  .edu-body .location {
+    font-size: .88rem;
+    color: #888;
+  }
+
+  /* ── Skills ── */
+  #skills { background: #fff; }
+
+  .skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  .skill-pill {
+    background: #f8f8f6;
+    border: 1.5px solid #e5e5e3;
+    border-radius: 999px;
+    padding: 12px 24px;
+    font-weight: 700;
+    font-size: .92rem;
+    color: #222;
+    transition: background .2s, border-color .2s, color .2s;
+  }
+
+  .skill-pill:hover {
+    background: #111;
+    color: #fff;
+    border-color: #111;
+  }
+
+  /* ── Experience ── */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+
+  .card {
+    background: #fff;
+    border-radius: 28px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0,0,0,.06);
+    transition: transform .3s;
+    text-decoration: none;
+    color: #111;
+  }
+
+  .card:hover { transform: translateY(-6px); }
+
+  .card-content { padding: 34px; }
+
+  .card-content .tag {
+    font-size: .78rem;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+    color: #2563eb;
+    text-transform: uppercase;
+  }
+
+  .card-content h3 {
+    font-size: 1.3rem;
+    font-weight: 800;
+    margin: 14px 0 6px;
+  }
+
+  .card-meta {
+    font-size: .88rem;
+    color: #555;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+
+  .card-date {
+    font-size: .83rem;
+    color: #999;
+    margin-bottom: 20px;
+  }
+
+  .card-content p.desc {
+    line-height: 1.9;
+    color: #555;
+    font-size: .97rem;
+  }
+
+  /* ── Blogs ── */
+  .blog-card {
+    background: #fff;
+    border-radius: 28px;
+    padding: 40px 36px;
+    box-shadow: 0 10px 40px rgba(0,0,0,.06);
+    text-decoration: none;
+    color: #111;
+    display: block;
+    transition: transform .3s;
+    position: relative;
+  }
+
+  .blog-card:hover { transform: translateY(-6px); }
+
+  .blog-card .tag {
+    font-size: .78rem;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+    color: #2563eb;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    display: block;
+  }
+
+  .blog-card h3 {
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin-bottom: 12px;
+    line-height: 1.2;
+  }
+
+  .blog-card p {
+    line-height: 1.85;
+    color: #666;
+    font-size: .97rem;
+  }
+
+  .blog-arrow {
+    position: absolute;
+    top: 36px;
+    right: 36px;
+    font-size: 1.4rem;
+    color: #ccc;
+    transition: color .2s, transform .2s;
+  }
+
+  .blog-card:hover .blog-arrow {
+    color: #111;
+    transform: translate(3px, -3px);
+  }
+
+  /* ── Footer ── */
+  footer {
+    padding: 100px 0 60px;
+    text-align: center;
+    background: #111;
+    color: #fff;
+  }
+
+  footer h2 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 18px;
+  }
+
+  footer p {
+    max-width: 600px;
+    margin: 0 auto 36px;
+    line-height: 1.9;
+    color: #aaa;
+    font-size: 1.05rem;
+  }
+
+  .links {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+  }
+
+  .links a {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: .95rem;
+    color: #fff;
+    border: 2px solid rgba(255,255,255,.2);
+    padding: 12px 26px;
+    border-radius: 999px;
+    transition: background .2s, border-color .2s;
+  }
+
+  .links a:hover {
+    background: rgba(255,255,255,.1);
+    border-color: rgba(255,255,255,.5);
+  }
+
+  .footer-copy {
+    font-size: .83rem;
+    color: #555;
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 1000px) {
+    .hero {
+      grid-template-columns: 1fr;
+      text-align: center;
+      padding-top: 120px;
+      gap: 40px;
+    }
+
+    .hero h1 { font-size: 4rem; }
+    .hero-desc { margin: 0 auto 34px; }
+    .hero-buttons { justify-content: center; }
+    .hero-image img { max-width: 380px; }
+
+    .about-grid { grid-template-columns: 1fr; gap: 40px; }
+    .about-image { order: -1; }
+    .about-image img { max-width: 340px; margin: auto; }
+
+    .grid { grid-template-columns: 1fr; }
+    .section-title { font-size: 2.8rem; }
+
+    nav { display: none; }
+  }
+
+  @media (max-width: 600px) {
+    .hero h1 { font-size: 3rem; }
+    .section-title { font-size: 2.2rem; }
+    footer h2 { font-size: 2rem; }
+    .edu-card { grid-template-columns: 1fr; gap: 8px; padding: 28px 24px; }
+  }
 </style>
 </head>
 <body>
 
+<!-- ── Header ── -->
 <header>
-<div class="container">
-<div class="logo">VINOD KRISHNAA</div>
-</div>
+  <div class="container">
+    <div class="header-inner">
+      <div class="logo">VINOD KRISHNAA</div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#blogs">Blogs</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </div>
 </header>
 
+<!-- ── Hero ── -->
 <div class="container">
-<section class="hero">
-
-<div>
-
-
-<h1>VINOD<br>KRISHNAA</h1>
-
-<p>
-BUILDING THE WORLD
-</p>
-
-<div class="hero-buttons">
-<a href="#projects" class="btn btn-dark">View Projects</a>
-  <a href="#experience" class="btn btn-light">
-Experience
-</a>
-
-<a href="#blogs" class="btn btn-light">Read Blogs</a>
-</div>
+  <section class="hero">
+    <div>
+      <span class="hero-tag">Civil &amp; Construction Engineer</span>
+      <h1>VINOD<br>KRISHNAA</h1>
+      <p class="hero-desc">
+        Building the world — one project at a time. Passionate about infrastructure, people, and the stories that shape both.
+      </p>
+      <div class="hero-buttons">
+        <a href="#experience" class="btn btn-dark">View Experience</a>
+        <a href="#education" class="btn btn-light">Education</a>
+        <a href="#blogs" class="btn btn-light">Read Blogs</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="images/vinod.jpg.jpeg" alt="Vinod Krishnaa">
+    </div>
+  </section>
 </div>
 
-<div class="hero-image">
-<img src="images/vinod.jpg.jpeg" alt="Vinod Krishnaa">
-</div>
-
+<!-- ── About ── -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-image">
+        <img src="images/vinod.jpg.jpeg" alt="Vinod Krishnaa">
+      </div>
+      <div class="about-text">
+        <span class="label">About Me</span>
+        <h2>A Guy Who Wants to Build the World</h2>
+        <p>
+          I'm a Civil and Construction Engineer with a love for making things that last — bridges, systems, infrastructure, and ideas. Currently pursuing my Master's in Construction Management and Technology at Arizona State University.
+        </p>
+        <p>
+          When I'm not on a job site or deep in data, you'll find me hiking trails or chasing simple adventures. I'm deeply passionate about people and their thoughts — which is probably why I write, and why building for communities matters so much to me.
+        </p>
+      </div>
+    </div>
+  </div>
 </section>
-</div>
 
-<section id="projects">
-<div class="container">
+<!-- ── Education ── -->
+<section id="education">
+  <div class="container">
+    <h2 class="section-title">Education</h2>
+    <p class="section-sub">Academic foundations in civil engineering and construction management across two countries.</p>
 
-<h2 class="section-title">Projects</h2>
-<p class="section-sub">Selected work in infrastructure analytics, transportation systems, machine learning, and construction technology.</p>
+    <div class="edu-list">
 
-<div class="grid">
+      <div class="edu-card">
+        <img class="edu-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/ASU_Sun_Devils_logo.svg/512px-ASU_Sun_Devils_logo.svg.png" alt="Arizona State University logo">
+        <div class="edu-body">
+          <div class="edu-year">2024 &nbsp;–&nbsp; 2026</div>
+          <h3>MS in Construction Management and Technology</h3>
+          <div class="uni">Arizona State University</div>
+          <div class="location">Tempe, Arizona, USA</div>
+        </div>
+      </div>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1400&auto=format&fit=crop">
-<div class="card-content">
-<span>Transportation Analytics</span>
-<h3>ADOT Estimate Price Analysis</h3>
-<p>Analyzed estimate pricing variability across transportation projects to improve planning and budgeting reliability.</p>
-</div>
-</div>
+      <div class="edu-card">
+        <img class="edu-logo" src="https://cit.edu.in/uploads/generalfiles/citlogo260204155727.png" alt="Coimbatore Institute of Technology logo">
+        <div class="edu-body">
+          <div class="edu-year">2020 &nbsp;–&nbsp; 2024</div>
+          <h3>BE in Civil Engineering</h3>
+          <div class="uni">Coimbatore Institute of Technology</div>
+          <div class="location">Coimbatore, Tamil Nadu, India</div>
+        </div>
+      </div>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1513828583688-c52646db42da?q=80&w=1400&auto=format&fit=crop">
-<div class="card-content">
-<span>IoT Infrastructure</span>
-<h3>Smart Landslide Warning System</h3>
-<p>Developed a sensor-based monitoring system integrating IoT technologies and automated alerts.</p>
-</div>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1400&auto=format&fit=crop">
-<div class="card-content">
-<span>Machine Learning</span>
-<h3>Pavement Performance Modeling</h3>
-<p>Created roadway deterioration prediction models using transportation datasets and forecasting techniques.</p>
-</div>
-</div>
-
-</div>
-</div>
+    </div>
+  </div>
 </section>
+
+<!-- ── Skills ── -->
+<section id="skills">
+  <div class="container">
+    <h2 class="section-title">Skills &amp; Tools</h2>
+    <p class="section-sub">Software and platforms I use to plan, manage, and deliver construction and infrastructure projects.</p>
+
+    <div class="skills-grid">
+      <div class="skill-pill">Procore</div>
+      <div class="skill-pill">Primavera P6</div>
+      <div class="skill-pill">Microsoft Project</div>
+      <div class="skill-pill">AutoCAD</div>
+      <div class="skill-pill">Microsoft Excel</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Experience ── -->
 <section id="experience">
+  <div class="container">
+    <h2 class="section-title">Professional Experience</h2>
+    <p class="section-sub">Industry experience across project engineering, construction management, infrastructure analytics, and project controls.</p>
 
-<div class="container">
+    <div class="grid">
 
-<h2 class="section-title">
-Professional Experience
-</h2>
+      <div class="card">
+        <div class="card-content">
+          <div class="tag">Project Management</div>
+          <h3>Project Engineer</h3>
+          <div class="card-meta">Willmeng Construction &nbsp;·&nbsp; Internship</div>
+          <div class="card-date">January 2026 – May 2026 &nbsp;·&nbsp; Phoenix, Arizona</div>
+          <p class="desc">
+            Supported delivery of a $14 million industrial construction project by coordinating RFIs, submittals, and drawing management. Contributed to field inspections, documentation workflows, and progress tracking using Procore, Newforma, and Salus.
+          </p>
+        </div>
+      </div>
 
-<p class="section-sub">
-Industry experience across project engineering, construction management, infrastructure analytics, and project controls.
-</p>
+      <div class="card">
+        <div class="card-content">
+          <div class="tag">Infrastructure Analytics</div>
+          <h3>Infrastructure Analytics Research Intern</h3>
+          <div class="card-meta">Government of Tamil Nadu &nbsp;·&nbsp; Research</div>
+          <div class="card-date">August 2023 &nbsp;·&nbsp; Coimbatore, India</div>
+          <p class="desc">
+            Worked on transportation safety and traffic engineering initiatives for state highway projects. Conducted road safety audits, traffic data analysis, origin-destination studies, and hazard assessments to support data-driven infrastructure decisions.
+          </p>
+        </div>
+      </div>
 
-<div class="grid">
+      <div class="card">
+        <div class="card-content">
+          <div class="tag">Project Management</div>
+          <h3>Construction Management Intern</h3>
+          <div class="card-meta">URC Construction &nbsp;·&nbsp; Internship</div>
+          <div class="card-date">July 2022 – January 2023 &nbsp;·&nbsp; Bengaluru, India</div>
+          <p class="desc">
+            Supported planning and coordination for a $92.2 million bridge and overpass project. Assisted with scheduling, documentation management, and subcontractor coordination while tracking RFIs and construction progress.
+          </p>
+        </div>
+      </div>
 
-<div class="card">
-
-<div class="card-content">
-
-<span>Project Management</span>
-
-<h3>Project Engineer</h3>
-
-<p> <p>
-Willmeng Construction | Internship <p>  
-  <p> January 2026 - May 2026 | Phoenix, Arizona <p>
-<br><br>
-During my internship at Willmeng Construction, I supported the delivery of a $14 million industrial construction project by coordinating RFIs, submittals, and drawing management activities. Working closely with project teams and subcontractors, I contributed to field inspections, documentation workflows, and progress tracking while utilizing platforms such as Procore, Newforma, and Salus to improve communication and project visibility.
-</p>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<div class="card-content">
-
-<span>Infrastructure Analytics</span>
-
-<h3>Infrastructure Analytics Research </h3>
-
-<p> <p>
-  Government of Tamil Nadu | Research <p>
-    <p> August 2023 | Coimbatore, India <p>
-
-<br><br>
-As an Infrastructure Analytics Research Intern, I worked on transportation safety and traffic engineering initiatives supporting state highway projects. My responsibilities included assisting with road safety audits, traffic data analysis, origin-destination studies, and hazard assessments. This experience strengthened my understanding of transportation systems and data-driven decision-making for public infrastructure.
-</p>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<div class="card-content">
-
-<span>Project Management</span>
-
-<h3>Construction Management Intern</h3>
-
-<p><p>
-URC Construction | Internship <p>
-  <p>July 2022 - January 2023 | Bengaluru, India<p>
-
-<br><br>
-At URC Construction, I supported planning and coordination activities for a $92.2 million bridge and overpass project. I assisted with project scheduling, documentation management, and subcontractor coordination while tracking RFIs and construction progress. The role provided valuable exposure to large-scale infrastructure delivery and project controls practices.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
+    </div>
+  </div>
 </section>
-  
+
+<!-- ── Blogs ── -->
 <section id="blogs">
-<div class="container">
+  <div class="container">
+    <h2 class="section-title">Blogs</h2>
+    <p class="section-sub">Thoughts on engineering, growth, leadership, infrastructure, and professional development.</p>
 
-<h2 class="section-title">Blogs</h2>
-<p class="section-sub">Thoughts on engineering, growth, leadership, infrastructure, and professional development.</p>
+    <div class="grid">
 
-<div class="grid">
+      <a class="blog-card" href="https://vinodcivilconstruction.blogspot.com" target="_blank" rel="noopener">
+        <span class="tag">Engineering</span>
+        <h3>Blueprints &amp; Beyond</h3>
+        <p>Thoughts on Civil Engineering, Construction &amp; Infrastructure.</p>
+        <span class="blog-arrow">↗</span>
+      </a>
 
-<a class="card" href="https://vinodcivilconstruction.blogspot.com">
-<div class="card-content">
-<span>Article</span>
-<h3>Blueprints & Beyond</h3>
-<p>Thoughts on Civil Engineering, Construction & Infrastructure</p>
-</div>
-</a>
+      <a class="blog-card" href="https://vinodkrishnaabeyondtheobvious.blogspot.com" target="_blank" rel="noopener">
+        <span class="tag">Ideas</span>
+        <h3>Beyond the Obvious</h3>
+        <p>Exploring the ideas, questions, and perspectives that don't get enough airtime.</p>
+        <span class="blog-arrow">↗</span>
+      </a>
 
-<a class="card" href="https://vinodkrishnaabeyondtheobvious.blogspot.com">
-<div class="card-content">
-<span>Article</span>
-<h3>Beyond the Obvious</h3>
-<p>Exploring the ideas, questions, and perspectives</p>
-</div>
-</a>
+      <a class="blog-card" href="https://vinodkrishnaanotesfromthejourney.blogspot.com" target="_blank" rel="noopener">
+        <span class="tag">Life</span>
+        <h3>Notes from the Journey</h3>
+        <p>Reflections on life, growth, and experiences along the way.</p>
+        <span class="blog-arrow">↗</span>
+      </a>
 
-<a class="card" href="https://vinodkrishnaanotesfromthejourney.blogspot.com">
-<div class="card-content">
-<span>Article</span>
-<h3>Notes from the Journey</h3>
-<p>Reflections on life, growth, experiences.</p>
-</div>
-</a>
-
-</div>
-</div>
+    </div>
+  </div>
 </section>
 
-<footer>
-<h2>Let's Build Better Infrastructure</h2>
-<p>Open to opportunities in Project Engineering, Project Controls, Infrastructure Analytics, and Construction Technology.</p>
-
-<div class="links">
-<a href="mailto:vinodkrishnaa02@gmail.com">Email</a>
-<a href="https://www.linkedin.com/in/vk2510/">LinkedIn</a>
-<a href="https://vinodkrishnaa.medium.com/">Medium</a>
-</div>
+<!-- ── Footer ── -->
+<footer id="contact">
+  <h2>Let's Build Better Infrastructure</h2>
+  <p>Open to opportunities in Project Engineering, Project Controls, Infrastructure Analytics, and Construction Technology.</p>
+  <div class="links">
+    <a href="mailto:vinodkrishnaa02@gmail.com">Email</a>
+    <a href="https://www.linkedin.com/in/vk2510/" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="https://vinodkrishnaa.medium.com/" target="_blank" rel="noopener">Medium</a>
+  </div>
+  <div class="footer-copy">© 2026 Vinod Krishnaa. All rights reserved.</div>
 </footer>
 
 </body>
