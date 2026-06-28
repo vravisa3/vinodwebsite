@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -296,6 +297,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 28px;
+    align-items: stretch;
   }
 
   .card {
@@ -310,7 +312,11 @@
 
   .card:hover { transform: translateY(-6px); }
 
-  .card-content { padding: 34px; }
+  .card-content {
+    padding: 34px;
+    display: flex;
+    flex-direction: column;
+  }
 
   .card-content .tag {
     font-size: .78rem;
@@ -324,6 +330,7 @@
     font-size: 1.3rem;
     font-weight: 800;
     margin: 14px 0 6px;
+    min-height: 3.2rem;
   }
 
   .card-meta {
@@ -331,12 +338,14 @@
     color: #555;
     font-weight: 600;
     margin-bottom: 4px;
+    min-height: 2rem;
   }
 
   .card-date {
     font-size: .83rem;
     color: #999;
     margin-bottom: 20px;
+    min-height: 1.6rem;
   }
 
   .card-content p.desc {
@@ -469,7 +478,7 @@
     .grid { grid-template-columns: 1fr; }
     .section-title { font-size: 2.8rem; }
 
-    nav { display: none; }
+    .edu-list { grid-template-columns: 1fr; }
   }
 
   @media (max-width: 600px) {
@@ -647,21 +656,18 @@
         <span class="tag">Engineering</span>
         <h3>Blueprints &amp; Beyond</h3>
         <p>Thoughts on Civil Engineering, Construction &amp; Infrastructure.</p>
-        <span class="blog-arrow">↗</span>
       </a>
 
       <a class="blog-card" href="https://vinodkrishnaabeyondtheobvious.blogspot.com" target="_blank" rel="noopener">
         <span class="tag">Ideas</span>
         <h3>Beyond the Obvious</h3>
         <p>Exploring the ideas, questions, and perspectives that don't get enough airtime.</p>
-        <span class="blog-arrow">↗</span>
       </a>
 
       <a class="blog-card" href="https://vinodkrishnaanotesfromthejourney.blogspot.com" target="_blank" rel="noopener">
         <span class="tag">Life</span>
         <h3>Notes from the Journey</h3>
         <p>Reflections on life, growth, and experiences along the way.</p>
-        <span class="blog-arrow">↗</span>
       </a>
 
     </div>
