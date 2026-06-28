@@ -457,6 +457,87 @@
     color: #555;
   }
 
+  /* ── Animations ── */
+
+  /* Scroll progress bar */
+  #progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    width: 0%;
+    background: linear-gradient(90deg, #2563eb, #60a5fa);
+    z-index: 200;
+    transition: width .1s linear;
+  }
+
+  /* Blueprint grid texture on hero */
+  .hero-wrap { position: relative; }
+  .hero-wrap > * { position: relative; z-index: 1; }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
+    opacity: .04;
+    background-image:
+      linear-gradient(#2563eb 1px, transparent 1px),
+      linear-gradient(90deg, #2563eb 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+
+  /* Fade-up on scroll */
+  .fade-up {
+    opacity: 0;
+    transform: translateY(32px);
+    transition: opacity .65s ease, transform .65s ease;
+  }
+  .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+  /* Hero stagger */
+  .hero-stagger-1 { transition-delay: .05s; }
+  .hero-stagger-2 { transition-delay: .2s; }
+  .hero-stagger-3 { transition-delay: .38s; }
+  .hero-stagger-4 { transition-delay: .55s; }
+
+  /* Card stagger */
+  .stagger-1 { transition-delay: .05s; }
+  .stagger-2 { transition-delay: .18s; }
+  .stagger-3 { transition-delay: .31s; }
+
+  /* Section title underline draw */
+  .section-title { display: inline-block; position: relative; }
+  .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    height: 4px;
+    width: 0;
+    background: #2563eb;
+    border-radius: 2px;
+    transition: width .8s ease .25s;
+  }
+  .section-title.visible::after { width: 56px; }
+
+  /* Hero image gentle float */
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50%       { transform: translateY(-10px); }
+  }
+  .hero-image img { animation: float 6s ease-in-out infinite; }
+
+  /* Skill pills pop in */
+  .skill-pill {
+    opacity: 0;
+    transform: scale(.85);
+    transition: opacity .4s ease, transform .4s ease,
+                background .2s, border-color .2s, color .2s;
+  }
+  .skill-pill.visible { opacity: 1; transform: scale(1); }
+
   /* ── Responsive ── */
   @media (max-width: 1000px) {
     .hero {
@@ -491,39 +572,33 @@
 </head>
 <body>
 
+<div id="progress-bar"></div>
+
 <!-- ── Header ── -->
 <header>
   <div class="container">
     <div class="header-inner">
-      <div class="logo">VINOD KRISHNAA</div>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#education">Education</a>
-        <a href="#skills">Skills</a>
-        <a href="#experience">Experience</a>
-        <a href="#blogs">Blogs</a>
-        <a href="#contact">Contact</a>
-      </nav>
+      <a href="#" class="logo" style="text-decoration:none;color:#111;">VINOD KRISHNAA</a>
     </div>
   </div>
 </header>
 
 <!-- ── Hero ── -->
-<div class="container">
+<div class="container hero-wrap">
+  <div class="hero-bg"></div>
   <section class="hero">
     <div>
-      
-      <h1>VINOD<br>KRISHNAA</h1>
-      <p class="hero-desc">
+      <h1 class="fade-up hero-stagger-1">VINOD<br>KRISHNAA</h1>
+      <p class="hero-desc fade-up hero-stagger-2">
         Building the world — one project at a time. Passionate about infrastructure, people, and the stories that shape both.
       </p>
-      <div class="hero-buttons">
+      <div class="hero-buttons fade-up hero-stagger-3">
         <a href="#experience" class="btn btn-dark">View Experience</a>
         <a href="#education" class="btn btn-light">Education</a>
         <a href="#blogs" class="btn btn-light">Read Blogs</a>
       </div>
     </div>
-    <div class="hero-image">
+    <div class="hero-image fade-up hero-stagger-4">
       <img src="images/vinod.jpg.jpeg" alt="Vinod Krishnaa">
     </div>
   </section>
@@ -533,7 +608,7 @@
 <section id="about">
   <div class="container">
     <div class="about-grid">
-      <div class="about-text">
+      <div class="about-text fade-up">
         <span class="label">About Me</span>
         <h2>A Guy Who Wants to Build the World</h2>
         <p>
@@ -550,12 +625,11 @@
 <!-- ── Education ── -->
 <section id="education">
   <div class="container">
-    <h2 class="section-title">Education</h2>
-    <p class="section-sub">Academic foundations in civil engineering and construction management across two countries.</p>
+    <h2 class="section-title fade-up">Education</h2>
+    <p class="section-sub fade-up">Academic foundations in civil engineering and construction management across two countries.</p>
 
     <div class="edu-list">
-
-      <div class="edu-card">
+      <div class="edu-card fade-up stagger-1">
         <img class="edu-logo" src="images/ASU.jpg" alt="Arizona State University logo">
         <div class="edu-body">
           <div class="edu-year">2024 &nbsp;–&nbsp; 2026</div>
@@ -565,7 +639,7 @@
         </div>
       </div>
 
-      <div class="edu-card">
+      <div class="edu-card fade-up stagger-2">
         <img class="edu-logo" src="images/Coimbatore_Institute_of_Technology_logo.png" alt="Coimbatore Institute of Technology logo">
         <div class="edu-body">
           <div class="edu-year">2020 &nbsp;–&nbsp; 2024</div>
@@ -574,7 +648,6 @@
           <div class="location">Coimbatore, Tamil Nadu, India</div>
         </div>
       </div>
-
     </div>
   </div>
 </section>
@@ -582,8 +655,8 @@
 <!-- ── Skills ── -->
 <section id="skills">
   <div class="container">
-    <h2 class="section-title">Skills &amp; Tools</h2>
-    <p class="section-sub">Software and platforms I use to plan, manage, and deliver construction and infrastructure projects.</p>
+    <h2 class="section-title fade-up">Skills &amp; Tools</h2>
+    <p class="section-sub fade-up">Software and platforms I use to plan, manage, and deliver construction and infrastructure projects.</p>
 
     <div class="skills-grid">
       <div class="skill-pill">Procore</div>
@@ -599,12 +672,11 @@
 <!-- ── Experience ── -->
 <section id="experience">
   <div class="container">
-    <h2 class="section-title">Professional Experience</h2>
-    <p class="section-sub">Industry experience across project engineering, construction management, infrastructure analytics, and project controls.</p>
+    <h2 class="section-title fade-up">Professional Experience</h2>
+    <p class="section-sub fade-up">Industry experience across project engineering, construction management, infrastructure analytics, and project controls.</p>
 
     <div class="grid">
-
-      <div class="card">
+      <div class="card fade-up stagger-1">
         <div class="card-content">
           <div class="tag">Project Management</div>
           <h3>Project Engineer</h3>
@@ -616,7 +688,7 @@
         </div>
       </div>
 
-      <div class="card">
+      <div class="card fade-up stagger-2">
         <div class="card-content">
           <div class="tag">Infrastructure Analytics</div>
           <h3>Infrastructure Analytics Research Intern</h3>
@@ -628,7 +700,7 @@
         </div>
       </div>
 
-      <div class="card">
+      <div class="card fade-up stagger-3">
         <div class="card-content">
           <div class="tag">Project Management</div>
           <h3>Construction Management Intern</h3>
@@ -639,7 +711,6 @@
           </p>
         </div>
       </div>
-
     </div>
   </div>
 </section>
@@ -647,44 +718,87 @@
 <!-- ── Blogs ── -->
 <section id="blogs">
   <div class="container">
-    <h2 class="section-title">Blogs</h2>
-    <p class="section-sub">Thoughts on engineering, growth, leadership, infrastructure, and professional development.</p>
+    <h2 class="section-title fade-up">Blogs</h2>
+    <p class="section-sub fade-up">Thoughts on engineering, growth, leadership, infrastructure, and professional development.</p>
 
     <div class="grid">
-
-      <a class="blog-card" href="https://vinodcivilconstruction.blogspot.com" target="_blank" rel="noopener">
+      <a class="blog-card fade-up stagger-1" href="https://vinodcivilconstruction.blogspot.com" target="_blank" rel="noopener">
         <span class="tag">Engineering</span>
         <h3>Blueprints &amp; Beyond</h3>
         <p>Thoughts on Civil Engineering, Construction &amp; Infrastructure.</p>
       </a>
 
-      <a class="blog-card" href="https://vinodkrishnaabeyondtheobvious.blogspot.com" target="_blank" rel="noopener">
+      <a class="blog-card fade-up stagger-2" href="https://vinodkrishnaabeyondtheobvious.blogspot.com" target="_blank" rel="noopener">
         <span class="tag">Ideas</span>
         <h3>Beyond the Obvious</h3>
         <p>Exploring the ideas, questions, and perspectives that don't get enough airtime.</p>
       </a>
 
-      <a class="blog-card" href="https://vinodkrishnaanotesfromthejourney.blogspot.com" target="_blank" rel="noopener">
+      <a class="blog-card fade-up stagger-3" href="https://vinodkrishnaanotesfromthejourney.blogspot.com" target="_blank" rel="noopener">
         <span class="tag">Life</span>
         <h3>Notes from the Journey</h3>
         <p>Reflections on life, growth, and experiences along the way.</p>
       </a>
-
     </div>
   </div>
 </section>
 
 <!-- ── Footer ── -->
 <footer id="contact">
-  <h2>Let's Build Better Infrastructure</h2>
-  <p>Open to opportunities in Project Engineering, Project Controls, Infrastructure Analytics, and Construction Technology.</p>
-  <div class="links">
+  <h2 class="fade-up">Let's Build Better Infrastructure</h2>
+  <p class="fade-up">Open to opportunities in Project Engineering, Project Controls, Infrastructure Analytics, and Construction Technology.</p>
+  <div class="links fade-up">
     <a href="mailto:vinodkrishnaa02@gmail.com">Email</a>
     <a href="https://www.linkedin.com/in/vk2510/" target="_blank" rel="noopener">LinkedIn</a>
     <a href="https://vinodkrishnaa.medium.com/" target="_blank" rel="noopener">Medium</a>
   </div>
   <div class="footer-copy">© 2026 Vinod Krishnaa. All rights reserved.</div>
 </footer>
+
+<script>
+  // ── Scroll progress bar ──
+  const bar = document.getElementById('progress-bar');
+  window.addEventListener('scroll', () => {
+    const scrolled = window.scrollY;
+    const total = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.width = (scrolled / total * 100) + '%';
+  });
+
+  // ── Intersection Observer for fade-up & section titles ──
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+
+  document.querySelectorAll('.fade-up, .section-title').forEach(el => observer.observe(el));
+
+  // ── Skill pills staggered pop-in ──
+  const pillObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const pills = document.querySelectorAll('.skill-pill');
+        pills.forEach((pill, i) => {
+          setTimeout(() => pill.classList.add('visible'), i * 80);
+        });
+        pillObserver.disconnect();
+      }
+    });
+  }, { threshold: 0.3 });
+
+  const skillsSection = document.getElementById('skills');
+  if (skillsSection) pillObserver.observe(skillsSection);
+
+  // ── Trigger hero elements immediately on load ──
+  window.addEventListener('load', () => {
+    document.querySelectorAll('.hero .fade-up').forEach(el => {
+      setTimeout(() => el.classList.add('visible'), 100);
+    });
+  });
+</script>
 
 </body>
 </html>
